@@ -6,9 +6,8 @@
 namespace viagogo {
 namespace eventfinder {
 
-Event::Event(int id, const std::vector<Ticket>& tickets)
+Event::Event(int id, std::vector<Ticket> tickets)
 	: id_(id), tickets_(tickets) {
-	tickets_ = tickets;
 	std::sort(std::begin(tickets_), std::end(tickets_), &Ticket::SortPriceLowestFirst);
 }
 

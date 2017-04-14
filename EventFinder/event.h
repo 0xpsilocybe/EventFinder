@@ -9,7 +9,7 @@ namespace eventfinder {
 
 class Event {
 public:
-	Event(int id, const std::vector<Ticket>& tickets);
+	Event(int id, std::vector<Ticket> tickets);
 	~Event();
 
 	const Ticket* get_cheapest_ticket() const;

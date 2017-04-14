@@ -7,6 +7,7 @@ namespace eventfinder {
  * \brief Simulated world configuration.
  */
 struct Configuration {
+	unsigned seed; /** Seed for random number generator. Zero value will initialize generator with time-based value. */
 	int top_left_x; /** X-coordinate of top left point of world. */
 	int top_left_y; /** Y-coordinate of top left point of world. */
 	int bottom_right_x; /** X-coordinate of bottom right point of world. */

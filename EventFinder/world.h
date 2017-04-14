@@ -13,7 +13,7 @@ public:
 	World::World(const Coordinate<int> &top_left, const Coordinate<int> &bottom_left);
 	~World();
 
-	void add_event(const std::vector<Ticket>& tickets, int x, int y);
+	void add_event(std::vector<Ticket>& tickets, int x, int y);
 
 private:
 	static int next_event_id_;

@@ -1,14 +1,14 @@
 #pragma once
 
 #include "configuration.h"
+#include "world.h"
 
 namespace viagogo {
 namespace eventfinder {
 
 class WorldCreator {
 public:
-	explicit WorldCreator(Configuration configuration);
-	~WorldCreator();
+	static World* build(Configuration configuration, std::locale &locale);
 };
 
 }
