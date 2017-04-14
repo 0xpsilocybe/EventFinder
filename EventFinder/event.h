@@ -1,5 +1,7 @@
 #pragma once
+
 #include <vector>
+
 #include "ticket.h"
 
 namespace viagogo {
@@ -9,6 +11,8 @@ class Event {
 public:
 	Event(int id, const std::vector<Ticket>& tickets);
 	~Event();
+
+	const Ticket* get_cheapest_ticket() const;
 
 	friend std::ostream& operator<<(std::ostream& os, const Event& event);
 
