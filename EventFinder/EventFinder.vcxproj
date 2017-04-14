@@ -147,15 +147,20 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="event.cc" />
+    <ClCompile Include="location.cc" />
     <ClCompile Include="main.cc" />
     <ClCompile Include="ticket.cc" />
     <ClCompile Include="world.cc" />
+    <ClCompile Include="worldcreator.cc" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="configuration.h" />
+    <ClInclude Include="coordinate.h" />
     <ClInclude Include="location.h" />
     <ClInclude Include="event.h" />
     <ClInclude Include="ticket.h" />
     <ClInclude Include="world.h" />
+    <ClInclude Include="worldcreator.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

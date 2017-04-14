@@ -10,18 +10,20 @@ namespace eventfinder {
 
 class World {
 public:
-	World(int width, int depth);
+	World::World(const Coordinate<int> &top_left, const Coordinate<int> &bottom_left);
 	~World();
 
 	void add_event(const std::vector<Ticket>& tickets, int x, int y);
 
 private:
 	static int next_event_id_;
+	const Coordinate<int> &top_left_;
+	const Coordinate<int> &bottom_right_;
 	int width_;
 	int depth_;
-	std::vector<Location<int>> locations_;
+	std::vector<Location> locations_;
 
-	Location<int>& get_location(int x, int y);
+	Location& get_location(int x, int y);
 };
 
 }

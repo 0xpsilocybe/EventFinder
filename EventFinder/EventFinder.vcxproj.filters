@@ -23,6 +23,12 @@
     <ClCompile Include="world.cc">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="worldcreator.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="location.cc">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ticket.h">
@@ -35,6 +41,15 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="location.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="worldcreator.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="configuration.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="coordinate.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
