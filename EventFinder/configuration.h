@@ -16,6 +16,7 @@ struct Configuration {
 	int max_tickets; /** Maximum number of tickets per event. */
 	long double min_ticket_price; /** Lowest ticket price. */
 	long double max_ticket_price; /** Highest ticket price. */
+	int max_event_result; /** Maximum number of results for search query. */
 };
 
 }

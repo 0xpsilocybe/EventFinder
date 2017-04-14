@@ -16,11 +16,13 @@ public:
 	Location(Coordinate<int> coordinate, Event* event);
 	~Location();
 
-	/**** Properties ****/
+	/**** Accessors ****/
 
-	bool add_event(Event* event);
-	bool holds_event() const;
+	Coordinate<int> get_coordinate() const { return coordinate_; }
 
+	Event* get_event() const; 
+	bool set_event(Event* event);
+	
 private:
 	Coordinate<int> coordinate_;
 	Event* event_;

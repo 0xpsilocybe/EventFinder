@@ -17,16 +17,16 @@ Location::~Location() {
 	}
 }
 
-bool Location::add_event(Event* event) {
-	if (!holds_event()) {
+bool Location::set_event(Event* event) {
+	if (event_ == nullptr) {
 		this->event_ = event;
 		return true;
 	}
 	return false;
 }
 
-bool Location::holds_event() const {
-	return event_ != nullptr;
+Event* Location::get_event() const {
+	return event_;
 }
 
 }

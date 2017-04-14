@@ -53,7 +53,7 @@ public:
 
 	/**** Properties ****/
 
-	T distance(const Coordinate& other) {
+	T distance_to(const Coordinate& other) {
 		return std::abs((this->x_ - other.x_)) + std::abs(this->y_ - other.y_);
 	}
 

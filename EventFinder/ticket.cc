@@ -62,7 +62,7 @@ bool Ticket::SortPriceLowestFirst(const Ticket& lhs, const Ticket& rhs) {
 
 std::ostream& operator<<(std::ostream& os, const Ticket& ticket) {
 	os.imbue(ticket.locale_);
-	os << std::showbase << std::put_money(ticket.price_);
+	os << std::showbase << std::setfill(' ') << std::setw(7) << std::put_money(ticket.price_);
 	return os;
 }
 

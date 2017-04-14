@@ -14,6 +14,7 @@ public:
 	~World();
 
 	void add_event(std::vector<Ticket>& tickets, int x, int y);
+	std::vector<Location*> find_events(Coordinate<int> location, int limit);
 
 private:
 	static int next_event_id_;
@@ -23,7 +24,7 @@ private:
 	int depth_;
 	std::vector<Location> locations_;
 
-	Location& get_location(int x, int y);
+	Location* get_location(int x, int y);
 };
 
 }
