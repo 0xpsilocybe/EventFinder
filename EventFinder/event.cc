@@ -13,6 +13,10 @@ Event::Event(int id, std::vector<Ticket> tickets)
 
 Event::~Event() { }
 
+int Event::get_id() const {
+	return id_;
+}
+
 const Ticket* Event::get_cheapest_ticket() const {
 	if (tickets_.size() > 0) {
 		return &tickets_[0];

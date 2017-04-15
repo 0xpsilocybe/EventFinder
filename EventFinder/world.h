@@ -16,6 +16,8 @@ public:
 	void add_event(std::vector<Ticket>& tickets, int x, int y);
 	std::vector<Location*> find_events(Coordinate<int> location, int limit);
 
+	friend std::ostream& operator<<(std::ostream& os, const World& event);
+
 private:
 	static int next_event_id_;
 	const Coordinate<int> &top_left_;

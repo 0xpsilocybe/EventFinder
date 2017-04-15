@@ -12,6 +12,7 @@ public:
 	Event(int id, std::vector<Ticket> tickets);
 	~Event();
 
+	int get_id() const;
 	const Ticket* get_cheapest_ticket() const;
 
 	friend std::ostream& operator<<(std::ostream& os, const Event& event);
