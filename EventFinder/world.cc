@@ -9,7 +9,7 @@ namespace eventfinder {
 
 int World::next_event_id_ = 0;
 
-World::World(const Coordinate<int>& top_left, const Coordinate<int>& bottom_right)
+World::World(const Coordinate<int> top_left, const Coordinate<int> bottom_right)
 	: top_left_(top_left), bottom_right_(bottom_right) {
 	width_ = bottom_right_.get_x() - top_left_.get_x() + 1;
 	depth_ = top_left_.get_y() - bottom_right_.get_y() + 1;

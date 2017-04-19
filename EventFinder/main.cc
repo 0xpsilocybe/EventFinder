@@ -23,7 +23,7 @@ int main() {
 	// Set up application
 	auto configuration = get_default_config();
 	auto world = viagogo::eventfinder::WorldCreator::build(configuration);
-	std::cout << std::endl << *world << std::endl;
+	std::cout << *world << std::endl;
 	// Process user query
 	viagogo::eventfinder::Coordinate<int> user_location;
 	std::cout << "Please input coordinates (separated by whitespace): ";
