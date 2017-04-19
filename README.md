@@ -12,7 +12,9 @@ viagogo Intern/Graduate Developer Test
 ### How do I get set up? ###
 
 1) Download sources
+
 2) Open Visual Studio solution file
+
 3) Compile
 
 ### Feature improvements ###
