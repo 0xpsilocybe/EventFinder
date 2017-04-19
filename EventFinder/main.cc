@@ -1,23 +1,18 @@
+#include <iostream>
+
 #include "ticket.h"
 #include "configuration.h"
 #include "worldcreator.h"
-#include <iostream>
-
-std::locale set_up_locale() {
-	std::locale system("");
-	std::locale::global(system);
-	return system;
-}
 
 viagogo::eventfinder::Configuration get_default_config() {
 	viagogo::eventfinder::Configuration configuration;
-	configuration.seed = 1;
+	//configuration.seed = 1;
 	configuration.top_left_x = -10;
 	configuration.top_left_y = 10;
 	configuration.bottom_right_x = 10;
 	configuration.bottom_right_y = -10;
 	configuration.event_density = 0.5;
-	configuration.min_ticket_price = 1.0; // US Cent
+	configuration.min_ticket_price = 100.0; // US Cent
 	configuration.max_ticket_price = 50000.0; // US Cent
 	configuration.max_tickets = 10;
 	configuration.max_event_result = 5;
@@ -26,9 +21,8 @@ viagogo::eventfinder::Configuration get_default_config() {
 
 int main() {
 	// Set up application
-	auto app_locale = set_up_locale();
 	auto configuration = get_default_config();
-	auto world = viagogo::eventfinder::WorldCreator::build(configuration, app_locale);
+	auto world = viagogo::eventfinder::WorldCreator::build(configuration);
 	std::cout << std::endl << *world << std::endl;
 	// Process user query
 	viagogo::eventfinder::Coordinate<int> user_location;

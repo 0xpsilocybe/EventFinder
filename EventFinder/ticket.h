@@ -11,7 +11,7 @@ public:
 	
 	/**** Construction ****/
 
-	Ticket(long double price, std::locale& locale);
+	Ticket(long double price);
 	Ticket(const Ticket& other);
 	Ticket(Ticket&& other) noexcept;
 	Ticket& operator=(const Ticket& other);
@@ -23,8 +23,6 @@ public:
 	void set_price(long double price);
 	long double get_price() const;
 
-	void set_locale(std::locale& locale) const;
-
 	/**** Sorting ****/
 
 	static bool SortPriceLowestFirst(const Ticket& lhs, const Ticket& rhs);
@@ -34,7 +32,6 @@ public:
 	friend std::ostream& operator<<(std::ostream& os, const Ticket& ticket);
 
 private:
-	std::locale& locale_;
 	long double price_;
 };
 

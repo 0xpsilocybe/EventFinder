@@ -8,7 +8,7 @@ namespace eventfinder {
 
 class WorldCreator {
 public:
-	static World* build(Configuration configuration, std::locale &locale);
+	static World* build(Configuration configuration);
 };
 
 }

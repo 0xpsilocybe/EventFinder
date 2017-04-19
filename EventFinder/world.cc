@@ -144,9 +144,9 @@ std::ostream& operator<<(std::ostream& os, const World& world) {
 		std::cout << "(" << std::setfill(' ') << std::setw(3) << x << ")";
 	}
 	std::cout << std::endl;
-	auto y = world.bottom_right_.get_y();
+	auto bottom_y = world.bottom_right_.get_y();
 	for (auto x = 0; x < world.width_; x++) {
-		std::cout << "(" << std::setfill(' ') << std::setw(3) << y++ << ") ";
+		std::cout << "(" << std::setfill(' ') << std::setw(3) << bottom_y++ << ") ";
 		for (auto y = 0; y < world.depth_; y++) {
 			auto event = world.locations_[x * world.width_ + y].get_event();
 			if (event == nullptr) {

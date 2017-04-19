@@ -1,10 +1,11 @@
 #include "worldcreator.h"
+
 #include <random>
 
 namespace viagogo {
 namespace eventfinder {
 
-World* WorldCreator::build(Configuration configuration, std::locale &locale) {
+World* WorldCreator::build(Configuration configuration) {
 	// Initialize random number generator with seed
 	if (configuration.seed == 0) {
 		srand(time(nullptr));
@@ -23,7 +24,7 @@ World* WorldCreator::build(Configuration configuration, std::locale &locale) {
 			if (uniform_events(random_engine) <= configuration.event_density) {
 				std::vector<Ticket> tickets;
 				for (auto t = 0; t < configuration.max_tickets; t++) {
-					tickets.push_back(Ticket(uniform_tickets(random_engine), locale));
+					tickets.push_back(Ticket(uniform_tickets(random_engine)));
 				}
 				world->add_event(tickets, x, y);
 			}
